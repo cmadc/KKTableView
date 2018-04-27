@@ -19,9 +19,7 @@
 @property(nonatomic,strong)NSMutableArray<NSString *> *sectionTitleList;
 
 @property(nonatomic,weak)id<NSObject> customDelegate;
-@property(nonatomic,copy)NSString *noResultImageName;
-@property(nonatomic,copy)NSString *noResultTitle;
-@property(nonatomic,copy)NSString *noResultDesc;
+@property(nonatomic,strong)UIView *emptyView;
 @property(nonatomic)id headerViewModel;
 
 - (KKCellModel*)cellModelAtIndexPath:(NSIndexPath*)indexPath;

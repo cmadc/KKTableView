@@ -73,15 +73,6 @@
 
 }
 
-//- (KKNotResultView*)resultView
-//{
-//    if (!_resultView)
-//    {
-//        _resultView = [KKNotResultView noResultViewWithImageName:Default_nodata];
-//    }
-//    return _resultView;
-//}
-
 - (void)setTableViewModel:(KKTableViewModel *)tableViewModel
 {
     _tableViewModel = tableViewModel;
@@ -94,36 +85,14 @@
     }
     
     [self reloadData];
-    
-//    if (_tableViewModel.noResultImageName)
-//    {
-//        if (![_tableViewModel cellModelAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]])
-//        {
-//            if (_tableViewModel.noResultTitle || _tableViewModel.noResultDesc) {
-//
-////                [self.resultView reloadDataWithImageName:_tableViewModel.noResultImageName title:_tableViewModel.noResultTitle desc:_tableViewModel.noResultDesc];
-//
-//            }else
-//            {
-////                [self.resultView reloadDataWithImageName:_tableViewModel.noResultImageName];
-//
-//            }
-//
-//            if (self.superview)
-//            {
-//                [self.superview addSubview:self.resultView];
-//                [self.resultView mas_remakeConstraints:^(MASConstraintMaker *make) {
-//
-//                    make.edges.equalTo(self);
-//                }];
-//            }
-//
-//        }else
-//        {
-//            [self.resultView removeFromSuperview];
-//        }
-//
-//    }
+    if (self.tableViewModel.emptyView) {
+        
+        if (![_tableViewModel cellModelAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]])
+        {
+            [self.superview addSubview:self.tableViewModel.emptyView];
+            self.tableViewModel.emptyView.frame = self.bounds;
+        }
+    }
     
 }
 
@@ -492,6 +461,7 @@
     }
 
 }
+
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     if (self.kkDelegate && [self.kkDelegate respondsToSelector:@selector(scrollViewDidEndDecelerating:)]) {
