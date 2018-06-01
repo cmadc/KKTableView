@@ -44,13 +44,16 @@
 //    free(properties);
 //    return propertiesArray;
 //}
-
+//Cannot synthesize weak property because the current deployment target does not support weak references
 + (KKTableView*)tableViewWithStyle:(UITableViewStyle)style;
 {
     KKTableView *view = [[KKTableView alloc]initWithFrame:CGRectZero style:style];
     view.separatorStyle = UITableViewCellSeparatorStyleNone;
     view.dataSource = view;
     view.delegate = view;
+    view.estimatedSectionHeaderHeight = 0;
+    view.estimatedSectionFooterHeight = 0;
+    view.estimatedRowHeight = 0;
     return view;
 }
 
