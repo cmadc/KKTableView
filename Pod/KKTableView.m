@@ -94,10 +94,10 @@
         {
             [self addSubview:self.tableViewModel.emptyView];
             self.tableViewModel.emptyView.frame = self.bounds;
-            self.tableViewModel.emptyView.hidden = YES;
+            self.tableViewModel.emptyView.hidden = NO;
         }else
         {
-            self.tableViewModel.emptyView.hidden = NO;
+            self.tableViewModel.emptyView.hidden = YES;
         }
     }
     
