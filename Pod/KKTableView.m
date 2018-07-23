@@ -92,7 +92,7 @@
         
         if (![_tableViewModel cellModelAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]])
         {
-            [self.superview addSubview:self.tableViewModel.emptyView];
+            [self addSubview:self.tableViewModel.emptyView];
             self.tableViewModel.emptyView.frame = self.bounds;
             self.tableViewModel.emptyView.hidden = YES;
         }else
