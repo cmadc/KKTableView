@@ -10,16 +10,13 @@ Pod::Spec.new do |s|
 
 
   s.name         = "KKTableView"
-  s.version      = "0.0.6"
-  s.summary      = "router."
+  s.version      = "0.0.7"
+  s.summary      = "UITableView"
 
   s.description  = <<-DESC
-                   A longer description of router in Markdown format.
-
-                   * Think: Why did you write this? What is the focus? What does it do?
-                   * CocoaPods will be using this to generate tags, and improve search results.
-                   * Try to keep it short, snappy and to the point.
-                   * Finally, don't worry about the indent, CocoaPods strips it!
+                   对UITableView的封装
+                   1.可以方便快速的使用tableview；
+                   2.tableview模块化开发工具
                    DESC
 
   s.homepage     = "https://github.com/cmadc/KKTableView"
