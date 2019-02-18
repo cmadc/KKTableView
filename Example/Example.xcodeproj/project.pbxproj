@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F84BD64221A989A0089662D /* NSObject+InvokeMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F84BD63221A989A0089662D /* NSObject+InvokeMethod.m */; };
 		3FAA90A42092D0DB0099F734 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA90A32092D0DB0099F734 /* AppDelegate.m */; };
 		3FAA90A72092D0DB0099F734 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA90A62092D0DB0099F734 /* ViewController.m */; };
 		3FAA90AA2092D0DB0099F734 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FAA90A82092D0DB0099F734 /* Main.storyboard */; };
@@ -21,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		1EDCE75EF0243E6166793F2F /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		3F84BD62221A989A0089662D /* NSObject+InvokeMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+InvokeMethod.h"; sourceTree = "<group>"; };
+		3F84BD63221A989A0089662D /* NSObject+InvokeMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+InvokeMethod.m"; sourceTree = "<group>"; };
 		3FAA909F2092D0DB0099F734 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FAA90A22092D0DB0099F734 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3FAA90A32092D0DB0099F734 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -91,6 +94,8 @@
 		3FAA90BD209311AE0099F734 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
+				3F84BD62221A989A0089662D /* NSObject+InvokeMethod.h */,
+				3F84BD63221A989A0089662D /* NSObject+InvokeMethod.m */,
 				3FAA90BF209311AE0099F734 /* KKTableView.h */,
 				3FAA90C2209311AE0099F734 /* KKTableView.m */,
 				3FAA90C3209311AE0099F734 /* KKTableViewModel.h */,
@@ -245,6 +250,7 @@
 			files = (
 				3FAA90C5209311AE0099F734 /* KKTableViewModel.m in Sources */,
 				3FAA90A72092D0DB0099F734 /* ViewController.m in Sources */,
+				3F84BD64221A989A0089662D /* NSObject+InvokeMethod.m in Sources */,
 				3FAA90B22092D0DC0099F734 /* main.m in Sources */,
 				3FAA90C6209311AE0099F734 /* KKTableView.m in Sources */,
 				3FAA90A42092D0DB0099F734 /* AppDelegate.m in Sources */,

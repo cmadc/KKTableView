@@ -10,6 +10,7 @@
 #import "KKTableViewModel.h"
 #import "UITableView+DequeueReusableCell.h"
 #import "UITableView+FDTemplateLayoutCell.h"
+#import "NSObject+InvokeMethod.h"
 
 @protocol KKTableViewDataSource <UITableViewDataSource>
 
@@ -24,27 +25,10 @@
 @property(nonatomic,weak)id<KKTableViewDataSource> kkDataSource;
 @property(nonatomic,weak)id<KKTableViewDelegate> kkDelegate;
 
-//@property(nonatomic,strong)KKNotResultView *resultView;
-//Declaration of 'objc_property_t' must be imported from module 'ObjectiveC.runtime' before it is required
-
 @end
 
 @implementation KKTableView
 
-//- (NSArray *)getAllPropertiesWithObject:(Class)class
-//{
-//    u_int count;
-//    objc_property_t *properties  =class_copyPropertyList(class, &count);
-//    NSMutableArray *propertiesArray = [NSMutableArray arrayWithCapacity:count];
-//    for (int i = 0; i<count; i++)
-//    {
-//        const char* propertyName =property_getName(properties[i]);
-//        [propertiesArray addObject: [NSString stringWithUTF8String: propertyName]];
-//    }
-//    free(properties);
-//    return propertiesArray;
-//}
-//Cannot synthesize weak property because the current deployment target does not support weak references
 + (KKTableView*)tableViewWithStyle:(UITableViewStyle)style;
 {
     KKTableView *view = [[KKTableView alloc]initWithFrame:CGRectZero style:style];
@@ -381,7 +365,7 @@
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
         KKCellModel *cellModel = [self.tableViewModel cellModelAtIndexPath:indexPath];
         if (cellModel.routerModel) {
-//            [(NSObject*)self.kkDelegate invokeMethodWithMethodName:cellModel.routerModel.methodName param:cellModel.routerModel.param];
+            [(NSObject*)self.kkDelegate invokeMethodWithMethodName:cellModel.routerModel.methodName param:cellModel.routerModel.param];
             [[CMRouter sharedInstance]showViewControllerWithRouterModel:cellModel.routerModel];
         }
 
@@ -406,8 +390,6 @@
 }
 
 
-
-
 - (nullable NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (self.kkDelegate && [self.kkDelegate respondsToSelector:@selector(tableView:editActionsForRowAtIndexPath:)]) {
@@ -415,8 +397,6 @@
     }
     return @[];
 }
-
-
 
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
