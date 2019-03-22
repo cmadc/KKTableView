@@ -1,15 +1,21 @@
 PODS:
   - KKRouter (0.0.1)
-  - UITableView+FDTemplateLayoutCell (1.6)
+  - "UITableView+FDTemplateLayoutCell (1.6)"
 
 DEPENDENCIES:
   - KKRouter
-  - UITableView+FDTemplateLayoutCell
+  - "UITableView+FDTemplateLayoutCell"
+
+SPEC REPOS:
+  https://github.com/cmadc/specs.git:
+    - KKRouter
+  https://github.com/cocoapods/specs.git:
+    - "UITableView+FDTemplateLayoutCell"
 
 SPEC CHECKSUMS:
   KKRouter: 9b42505488d5a2c395ca3b271b02e6ceee81921a
-  UITableView+FDTemplateLayoutCell: 5c949b4a5059c404b442926c0e80f81d10a2d66f
+  "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
 
-PODFILE CHECKSUM: 10065462beedf1896a22dd87fc2811e544726e49
+PODFILE CHECKSUM: 429538ff342beabfc2488592dbcf6e26d3599eae
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.6.1
