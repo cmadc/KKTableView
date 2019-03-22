@@ -372,6 +372,14 @@
     }
 }
 
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (self.kkDelegate && [self.kkDelegate respondsToSelector:@selector(tableView:didDeselectRowAtIndexPath:)]) {
+        
+        [self.kkDelegate tableView:tableView didDeselectRowAtIndexPath:indexPath];
+    }
+}
+
 -(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (self.kkDelegate && [self.kkDelegate respondsToSelector:@selector(tableView:titleForDeleteConfirmationButtonForRowAtIndexPath:)]) {
